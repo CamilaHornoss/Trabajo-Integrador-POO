@@ -1,0 +1,17 @@
+#BlueJ class context
+#Tue Nov 03 15:45:06 PYST 2026
+comment0.target=Estudiante
+comment0.text=\r\n /**\r\n Representa a un socio de tipo Estudiante en la biblioteca.\r\n Los estudiantes disponen de un plazo de 20 d\u00EDas fijados para cada pr\u00E9stamo. \r\n Para solicitar un nuevo ejemplar, no deben superar el l\u00EDmite de 3 libros en su poder\r\n ni registrar deudas de pr\u00E9stamos vencidos.\r\n
+comment1.params=p_carrera p_dniSocio p_nombre p_diasPrestamo
+comment1.target=Estudiante(java.lang.String, int, java.lang.String, int)
+comment1.text=\r\n Constructor que asigna los atributos del socio estudiante \r\n y establece un plazo por defecto de 20 d\u00EDas para sus pr\u00E9stamos.\r\n \r\n @param p_carrera  Carrera que cursa el estudiante.\r\n @param p_dniSocio N\u00FAmero de DNI del estudiante.\r\n @param p_nombre   Nombre y apellido del estudiante.\r\n @param p_diasPrestamo   D\u00EDas permitidos para cada pr\u00E9stamo.\r\n
+comment2.params=p_carrera
+comment2.target=void setCarrera(java.lang.String)
+comment2.text=\r\n Establece la carrera en la cual est\u00E1 inscripto el estudiante.\r\n \r\n @param p_carrera Nombre de la carrera.\r\n
+comment3.target=java.lang.String getCarrera()
+comment3.text=\r\n Obtiene la carrera universitaria que se encuentra cursando el estudiante.\r\n \r\n @return Nombre de la carrera.\r\n
+comment4.target=boolean puedePedir()
+comment4.text=\r\n Eval\u00FAa si el estudiante se encuentra apto para retirar un nuevo libro de la biblioteca.\r\n Para autorizar el pr\u00E9stamo, se verifica simult\u00E1neamente que no posea m\u00E1s de 3 libros \r\n en su poder y que no registre pr\u00E9stamos vencidos al d\u00EDa de la fecha.\r\n \r\n @return true si posee menos de 3 libros y ning\u00FAn pr\u00E9stamo vencido.\r\n
+comment5.target=java.lang.String soyDeLaClase()
+comment5.text=\r\n Retorna la denominaci\u00F3n del tipo de socio.\r\n \r\n @return El String "Estudiante".\r\n
+numComments=6

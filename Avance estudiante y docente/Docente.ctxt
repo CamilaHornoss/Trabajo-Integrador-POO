@@ -1,0 +1,22 @@
+#BlueJ class context
+#Tue Nov 03 15:45:44 PYST 2026
+comment0.target=Docente
+comment0.text=\r\n /**\r\n Representa a un socio de tipo Docente dentro del sistema de gesti\u00F3n de la biblioteca.\r\n Los docentes no poseen un l\u00EDmite en la cantidad de libros que pueden solicitar simult\u00E1neamente.\r\n Inicialmente disponen de 5 d\u00EDas de pr\u00E9stamo, plazo que puede incrementarse individualmente \r\n como incentivo a su responsabilidad.\r\n
+comment1.params=p_area p_dniSocio p_nombre p_diasPrestamo
+comment1.target=Docente(java.lang.String, int, java.lang.String, int)
+comment1.text=\r\n Constructor que inicializa un nuevo socio Docente con los datos ingresados\r\n y le asigna un plazo inicial de 5 d\u00EDas de pr\u00E9stamo.\r\n \r\n @param p_area           \u00C1rea de desempe\u00F1o o departamento del docente.\r\n @param p_dniSocio       N\u00FAmero de DNI del docente.\r\n @param p_nombre         Nombre del docente.\r\n @param p_diasPrestamo   D\u00EDas permitidos para cada pr\u00E9stamo.\r\n
+comment2.params=p_area
+comment2.target=void setArea(java.lang.String)
+comment2.text=\r\n Establece el \u00E1rea a la cual pertenece el docente.\r\n \r\n @param p_area Nombre del \u00E1rea o departamento.\r\n
+comment3.target=java.lang.String getArea()
+comment3.text=\r\n Obtiene el \u00E1rea a la cual pertenece el docente.\r\n \r\n @return El String con el \u00E1rea del docente.\r\n
+comment4.target=boolean esResponsable()
+comment4.text=\r\n Eval\u00FAa si el docente es considerado responsable.\r\n Un docente es responsable si nunca registr\u00F3 una devoluci\u00F3n fuera de t\u00E9rmino\r\n y tampoco posee en la actualidad pr\u00E9stamos cuyo plazo de devoluci\u00F3n se encuentre vencido.\r\n \r\n @return true si el docente nunca tuvo ni tiene pr\u00E9stamos vencidos, {@code false} en caso contrario.\r\n
+comment5.params=p_dias
+comment5.target=void cambiarDiasDePrestamo(int)
+comment5.text=\r\n Adiciona d\u00EDas de pr\u00E9stamo al plazo actual del docente como premio a su responsabilidad.\r\n \r\n @param p_dias Cantidad de d\u00EDas adicionales a incrementar al plazo de pr\u00E9stamo.\r\n
+comment6.target=boolean puedePedir()
+comment6.text=\r\n Determina si el docente se encuentra facultado para solicitar un nuevo pr\u00E9stamo.\r\n <p>\r\n Un docente puede solicitar un libro \u00FAnicamente si no posee ninguna devoluci\u00F3n vencida\r\n a la fecha actual. No tiene restricciones sobre el cupo m\u00E1ximo de libros.\r\n \r\n @return true si el docente no posee pr\u00E9stamos vencidos pendientes, {@code false} si adeuda un libro fuera de plazo.\r\n
+comment7.target=java.lang.String soyDeLaClase()
+comment7.text=\r\n Retorna el tipo de socio correspondiente a esta clase.\r\n \r\n @return El String "Docente".\r\n
+numComments=8
