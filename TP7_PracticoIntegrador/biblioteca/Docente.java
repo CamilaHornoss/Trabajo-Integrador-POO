@@ -1,3 +1,5 @@
+package biblioteca;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -12,7 +14,8 @@ import java.util.GregorianCalendar;
  * Inicialmente disponen de 5 días de préstamo, plazo que puede incrementarse individualmente 
  * como incentivo a su responsabilidad.
  */
-public class Docente extends Socio{
+public class Docente extends Socio {
+    private static final long serialVersionUID = 1L;
     
     /** Área de conocimiento o departamento al que pertenece el docente. */
     private String area;
@@ -56,19 +59,11 @@ public class Docente extends Socio{
      * @return true si el docente nunca tuvo ni tiene préstamos vencidos, {@code false} en caso contrario.
      */
     public boolean esResponsable(){
-        for (Prestamo prest : getPrestamos()) {
-            if (prest.getFechaDevolucion() != null) {
-                // Si devolvió el libro después del vencimiento
-                Calendar fechaVencimiento = (Calendar) prest.getFechaRetiro().clone();
-                fechaVencimiento.add(Calendar.DAY_OF_YEAR, getDiasPrestamo());
-                if (prest.getFechaDevolucion().after(fechaVencimiento)) {
-                    return false;
-                }
-            } else {
-                // Si aún lo tiene y ya está vencido
-                if (prest.vencido(new GregorianCalendar())) {
-                    return false;
-                }
+        Calendar hoy = new GregorianCalendar();
+        for (Prestamo prestamo : getPrestamos()) {
+            Calendar devolucion = prestamo.getFechaDevolucion();
+            if (prestamo.vencido(devolucion == null ? hoy : devolucion)) {
+                return false;
             }
         }
         return true;

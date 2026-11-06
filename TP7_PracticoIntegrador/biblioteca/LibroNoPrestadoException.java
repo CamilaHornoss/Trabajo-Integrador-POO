@@ -1,3 +1,5 @@
+package biblioteca;
+
 /**
  * Excepción que se lanza cuando se intenta operar sobre un libro como si
  * estuviera prestado (devolverlo o consultar quién lo tiene) pero el libro

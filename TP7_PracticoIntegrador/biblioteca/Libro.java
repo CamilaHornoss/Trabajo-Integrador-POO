@@ -1,3 +1,5 @@
+package biblioteca;
+
 
 /**
  * Representa un Libro y su lista de sus Prestamos.
@@ -7,8 +9,8 @@
  * @version 05/11/2026
  */
 import java.util.*;
-public class Libro
-{
+public class Libro implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * Creacion de Atributos.
      */

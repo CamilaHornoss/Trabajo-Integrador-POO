@@ -1,3 +1,5 @@
+package biblioteca;
+
 import java.util.ArrayList;
 
 /** 
@@ -11,7 +13,8 @@ import java.util.ArrayList;
  * Para solicitar un nuevo ejemplar, no deben superar el límite de 3 libros en su poder
  * ni registrar deudas de préstamos vencidos.
  */
-public class Estudiante extends Socio{
+public class Estudiante extends Socio {
+    private static final long serialVersionUID = 1L;
     
     /** Nombre de la carrera universitaria que cursa el estudiante. */
     private String carrera;

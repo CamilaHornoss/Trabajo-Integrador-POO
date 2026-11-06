@@ -1,3 +1,5 @@
+package biblioteca;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -8,7 +10,8 @@ import java.util.GregorianCalendar;
  * @author Equipo (cuarto grupo)
  * @version TrabajoIntegrador
  */
-public class Biblioteca {
+public class Biblioteca implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
 
     /** Nombre de la biblioteca. */
     private String nombre;
