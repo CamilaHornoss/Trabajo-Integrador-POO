@@ -23,3 +23,17 @@ Reglas del dominio:
   - Docente: 5 días de préstamo, sin límite de libros; si es responsable
     se le pueden ampliar los días.
   - Ningún socio puede pedir un libro si tiene un préstamo vencido.
+
+Uso en BlueJ:
+  1. Abrir TP7_PracticoIntegrador y entrar al paquete biblioteca.
+  2. Compilar. Para la interfaz gráfica, ejecutar el main de VentanaBiblioteca.
+  3. Usar Guardar o cerrar la ventana para guardar los cambios.
+     Al volver a abrir se recuperan libros, socios e historial de préstamos.
+     El archivo se guarda en ~/.tp7-biblioteca/biblioteca.dat.
+     Usar una sola ventana por vez para trabajar con ese archivo.
+  4. El main de GestionBiblioteca sigue disponible como demostración
+     por consola con datos en memoria, separados del archivo de la interfaz.
+
+Se requiere Java 11 o posterior. Los préstamos conservan el plazo que
+tenían al otorgarse. Las devoluciones durante el día de vencimiento
+se consideran a tiempo.

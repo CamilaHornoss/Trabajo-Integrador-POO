@@ -1,3 +1,5 @@
+package biblioteca;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -221,6 +223,10 @@ public class GestionBiblioteca {
             return;
         }
         int dias = leerEntero("Días a agregar: ");
+        if (dias <= 0 || dias > Integer.MAX_VALUE - docente.getDiasPrestamo()) {
+            System.out.println("Ingrese una ampliación positiva válida.");
+            return;
+        }
         docente.cambiarDiasDePrestamo(dias);
         System.out.println("Nuevo plazo de " + docente.getNombre() + ": "
                 + docente.getDiasPrestamo() + " días.");
@@ -238,6 +244,10 @@ public class GestionBiblioteca {
      * Incluye un préstamo viejo para que aparezca como vencido.
      */
     private static void cargarDatosDePrueba(Biblioteca p_biblioteca) {
+        if (!p_biblioteca.getSocios().isEmpty() || !p_biblioteca.getLibros().isEmpty()) {
+            System.out.println("Los datos de prueba se cargan solo en una biblioteca vacía.");
+            return;
+        }
         p_biblioteca.nuevoSocioDocente(14524782, "Juan Perez", "Matematica");
         p_biblioteca.nuevoSocioDocente(17982110, "Juan Fernandez", "Fisica");
         p_biblioteca.nuevoSocioEstudiante(28987498, "Francisco Paenza", "Sistemas");
